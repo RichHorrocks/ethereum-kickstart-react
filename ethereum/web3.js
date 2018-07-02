@@ -5,7 +5,7 @@ let web3;
 if (typeof window !== 'undefined' && typeof window.web3 !== 'undefined') {
   // We are in the browser and Metamask is running.
   // Use MM's provider and create our instance of web3.
-  const web3 = new Web3(window.web3.currentProvider);
+  web3 = new Web3(window.web3.currentProvider);
   console.log("Using MM");
 } else {
   // We are on the server, or the user isn't running MM.
